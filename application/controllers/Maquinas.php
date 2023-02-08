@@ -10,7 +10,7 @@ class Maquinas extends CI_Controller{
 
     public function index(){
         $data["maquinaria"]= $this->Maquinari_model->mostrar
-        $this->load->view('Maquinaria');
+        $this->load->view('Maquinaria', $data);
     }
 }
 ?>
