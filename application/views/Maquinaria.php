@@ -9,12 +9,17 @@
 <body>
     <header>
         <nav>
-           <a href="<?php echo base_url();?>Maquinas/add_maquinaria"></a>
+           
         </nav>
     </header>
     <table>
         <thead>
-            <tr></tr>
+            <tr>
+                <button>
+                <a type="button" href="<?php echo base_url();?>Maquinas/add_maquinaria">Nuevo</a>
+                </button>
+            
+            </tr>
             <tr>
                 <th>#</th>
                 <th>Codigo</th>
