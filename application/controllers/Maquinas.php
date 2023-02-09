@@ -23,13 +23,21 @@ class Maquinas extends CI_Controller{
         $data['tipo'] = $_POST["tipo"];
         $data['descripcion'] = $_POST["descripcion"];
         $this->Maquinaria_model->insert_maquinaria($data);
-        redirect('/maquinaria/');
+        redirect('/Maquinas/');
     }
     public function acccion_maquinaria(){
         $data['id'] = $this->Maquinaria_model->obtener_maquinaria($_REQUEST["ID"]);
         $this->load->view('updMaquinaria', $data);
     }
-   
+   public function update_maquinaria(){
+       $data['id']=$_POST["ID"];
+       $data['maquiria']= $_POST["maquinaria"];
+   }
+   public function delete_maquinaria(){
+    $id=$_REQUEST["id"];
+    $this->Maquinaria_model->delete_maquinaria($id);
+    redirect('/Maquinas/');
+   }
 
 }
 ?>
