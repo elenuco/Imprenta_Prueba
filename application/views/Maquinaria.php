@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-
+           <a href="<?php echo base_url();?>Maquinas/add_maquinaria"></a>
         </nav>
     </header>
     <table>
@@ -24,12 +24,12 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach $maquinaria as $r?:>
+            <?php foreach ($maquinaria as $r):?>
          <tr>
                 <td><?=$r->id?></td>
                 <td><?=$r->codigo?></td>
                 <td><?=$r->nombre?></td>
-                <td><?=$r->tipo?></td>
+                <td><?=$r->tipo_id?></td>
                 <td><?=$r->descripcion?></td>
                 <td>
                  <a class="dropdown-item" href="<?php echo base_url();?>Maquinas/delete_maquinaria?id=<?=$r->id?>">Eliminar</a>
@@ -38,7 +38,7 @@
 
                 </td>
          </tr>
-          <?php endforeach;?>
+         <?php endforeach; ?> 
         </tbody>
     </table>
 </body>
