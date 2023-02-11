@@ -18,9 +18,18 @@ public function mostrar_maquinaria() {
         $maquinaria=$this->db->get('maquinaria');
         return $maquinaria->result();
  }
- public function update_consultorio($data){
+ public function update_maquinaria($data){
         $this->db->where('id', $data['id']);
         return $this->db->update('maquinaria', $data);
  }
+ public function obtener_tipo ($id_tipo){
+       $this->db->where('id_tipo',$id_tipo);
+       $tipo=$this->db->get('tipo');
+       return $tipo->result();
+}
+public function update_tipo (){
+       $this->db->set('tipo',$data['tipo']);
+       $this->db->update('tipo',$data);
+}
 }
 ?>

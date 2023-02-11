@@ -38,6 +38,15 @@ class Maquinas extends CI_Controller{
     $this->Maquinaria_model->delete_maquinaria($id);
     redirect('/Maquinas/');
    }
-
+   public function save_tipo() {
+    $data['tipo']=$_POST["tipo"];
+    $this->tipo_model->insertar_tipo($data); 
+    self::index();
+}
+public function mostrar_tipos() {
+    $roles= $this->usuarios_model->mostrar_roles();
+    $data['roles']= $roles;
+    $this->load->view('newUsuarios',$data);
+}
 }
 ?>
