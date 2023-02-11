@@ -25,7 +25,7 @@ class Maquinas extends CI_Controller{
         $this->Maquinaria_model->insert_maquinaria($data);
         redirect('/Maquinas/');
     }
-    public function acccion_maquinaria(){
+    public function accion_maquinaria(){
         $data['id'] = $this->Maquinaria_model->obtener_maquinaria($_REQUEST["ID"]);
         $this->load->view('updMaquinaria', $data);
     }

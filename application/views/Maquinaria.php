@@ -39,7 +39,7 @@
                 <td>
                  <a class="dropdown-item" href="<?php echo base_url();?>Maquinas/delete_maquinaria?id=<?=$r->id?>">Eliminar</a>
 
-                <a class="dropdown-item" href="<?php echo base_url();?>Maquinas/acccion_maquinaria?id=<?=$r->id?>">Editar</a>
+                <a class="dropdown-item" href="<?php echo base_url();?>Maquinas/accion_maquinaria?id=<?=$r->id?>">Editar</a>
 
                 </td>
          </tr>
